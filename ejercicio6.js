@@ -1,17 +1,14 @@
-//ESCRIBIR UNA FUNCION LLMAADA MULTIPLICAR ARREGLO
-//QUE RECIBA UN ARREGLO DE NUMEROS Y RETORNE
-//LA MULTIPLICCION DE TODOSO LOS ELEMENTOS
+//Escribir una funcion llmada contraseña valida
+//que reciba un string y retoene true si el String es igual a
+//"2F(jjbFSuj" o "eoZiugBf6G9". De lo contrario que retorne false
 
-const multiplicarArreglo = arreglo => {
-  let multiplicacion = 1;
-  for (let n = 0; n < arreglo.length; n++){
-    multiplicacion = multiplicacion * arreglo[n];
-  }
-  return multiplicacion;
+const contraseñaValida = (tex) => {
+  if (tex === "jjbFSuj" || tex === "eoZiugBf6G9") {
+    return true;
+  } else return false;
 }
 
-const arreglo = [1,2,3,4,5];
+let tex = prompt("Por favor ingrese la contraseña: ");
+let respuesta = contraseñaValida(tex);
 
-let respuesta = multiplicarArreglo(arreglo);
-
-console.log("La multiplicacion de loe elementos del arreglo es: "+respuesta);
+console.log(respuesta);

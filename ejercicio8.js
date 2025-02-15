@@ -1,19 +1,23 @@
-//Escribir una funcion llamda calcular impuesto
-// que reciba dos argumentos numericos edad e ingresos
-// si la edad es mayor o igual a 18 y los ingresos son mayores o iguales a 1000
-//debe retornar ingresoss *40%, de lo contrario retornar 0
+//Escribir una funcion llamada numeo de as
+// que reciba un string y retorne el numero de veces
+// que aparece la letra a
 
-let edad = parseInt(prompt("Por favor ingrese la edad: "));
-let ingresos = parseFloat(prompt("Por favor escriba los ingresos: "));
+let tex = prompt("Por favor ingrese una aplabra: ");
 
-const calcularImpuesto = (edad,ingresos) => {
-  if (edad >= 18 && ingresos>=1000) {
-    return ingresos * 0.40;
-  } else {
-    return 0;
+const numeroDeAes = (tex) => {
+  let array = tex.split("");
+
+  let suma = 0;
+
+  for (let n = 0; n < array.length; n++){
+    if (array[n] === "a" || array[n] === "A") {
+      suma += 1;
+    }
   }
+  return suma;
 }
 
-let respuesta = calcularImpuesto(edad, ingresos);
+let res = numeroDeAes(tex);
 
-console.log(respuesta);
+console.log("La cantidad de as que tiene la palabra es: " + res);
+

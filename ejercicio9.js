@@ -1,23 +1,18 @@
-//Escribir una funcion llamada numeo de as
-// que reciba un string y retorne el numero de veces
-// que aparece la letra a
+//ESscribir una funcion llamda remover ceros que reciba un arreglo de numeros y retorne un nuevo arreglo
+// excluyendo los ceros
 
-let tex = prompt("Por favor ingrese una aplabra: ");
-
-const numeroDeAes = (tex) => {
-  let array = tex.split("");
-
-  let suma = 0;
-
+const removerCeros = (array) => {
+  const arrayaux = [];
   for (let n = 0; n < array.length; n++){
-    if (array[n] === "a" || array[n] === "A") {
-      suma += 1;
+    let aux = array[n]
+    if (aux != 0) {
+      arrayaux.push(aux);
     }
   }
-  return suma;
+  console.log("array nuevo: "+arrayaux)
 }
 
-let res = numeroDeAes(tex);
+const array = [1, 0, 5, 6, 2, 0, 3, 5, 4, 0];
+console.log("array anterior: " + array);
 
-console.log("La cantidad de as que tiene la palabra es: " + res);
-
+removerCeros(array);

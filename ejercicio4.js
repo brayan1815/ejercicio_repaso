@@ -1,14 +1,24 @@
-//04.IMPRIMIR UN ARREGLO
+//Escribir una funcion llamada fizzbuzz que reciba un string
+// de acuerdo a lo siguiente
 
-//Escrinbir una funcion llamda imprimir arreglo que reciba un arreglo e imprima
-//elemento en una linea aparte
+//fizz si el numero es multiplo de tres
+//buzz si el numero es multiplo de 5
+//fizzbus si el numero es mutltipo de tres tando como de cinco
 
-const imprimirAreglo = (arreglo) => {
-  for (let n = 0; n <= arreglo.length; n++){
-    console.log(arreglo[n]);
-  }
+//si no cumple ninguna de las condiciones anteruiores retonrnar el mismo numero
+
+const fizzbuzz = (numero) => {
+  if (numero % 3 == 0 && numero % 5 == 0) {
+    return "fizzbuz";
+  } else if (numero % 3 == 0) {
+    return "fizz";
+  } else if (numero % 5 == 0) {
+    return "buzz;"
+  } else return numero;
 }
 
-const arre = [10, 5, 5, 6, 2, 4, 5];
+let numero = parseInt(prompt("Por favor ingrese el numero: "));
 
-imprimirAreglo(arre);
+let respuesta = fizzbuzz(numero);
+
+console.log("El numero es: " + respuesta);

@@ -1,18 +1,35 @@
-//ESscribir una funcion llamda remover ceros que reciba un arreglo de numeros y retorne un nuevo arreglo
-// excluyendo los ceros
+//Escribir una funcion llamada transcribir que reciba un String(Una cadena de ADN)
+//Y que retorne otro string (ARN)
+//G->C
+//C->G
+//T->A
+//A->U
 
-const removerCeros = (array) => {
-  const arrayaux = [];
-  for (let n = 0; n < array.length; n++){
-    let aux = array[n]
-    if (aux != 0) {
-      arrayaux.push(aux);
+let cadenaadn = prompt("Por favor ingrese la cadena: ")
+
+const transcribir = (cadenaadn) => {
+  let array = cadenaadn.split("");
+  console.log(array);
+
+  for (let n = 0; n < array.length; n++) {
+    if (array[n] === "G" || array[n] === "g") {
+      array[n] = "C";
+    } else if (array[n] === "C" || array[n] === "c") {
+      array[n] = "G";
+    } else if (array[n] === "T" || array[n] === "t") {
+      array[n] = "A";
+    } else if (array[n] === "A" || array[n] === "a") {
+      array[n] = "U";
     }
   }
-  console.log("array nuevo: "+arrayaux)
+  // let cadenaarn = "";
+  // for (let b = 0; b < array.length; b++){
+  //   cadenaarn = cadenaarn+array[b];
+  // }
+  return array.join("");
 }
 
-const array = [1, 0, 5, 6, 2, 0, 3, 5, 4, 0];
-console.log("array anterior: " + array);
+let res = transcribir(cadenaadn);
 
-removerCeros(array);
+console.log("CADENA ADN: " + cadenaadn);
+console.log("CADENA ARN: "+res);

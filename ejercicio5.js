@@ -1,24 +1,17 @@
-//Escribir una funcion llamada fizzbuzz que reciba un string
-// de acuerdo a lo siguiente
+//ESCRIBIR UNA FUNCION LLMAADA MULTIPLICAR ARREGLO
+//QUE RECIBA UN ARREGLO DE NUMEROS Y RETORNE
+//LA MULTIPLICCION DE TODOSO LOS ELEMENTOS
 
-//fizz si el numero es multiplo de tres
-//buzz si el numero es multiplo de 5
-//fizzbus si el numero es mutltipo de tres tando como de cinco
-
-//si no cumple ninguna de las condiciones anteruiores retonrnar el mismo numero
-
-const fizzbuzz = (numero) => {
-  if (numero % 3 == 0 && numero % 5 == 0) {
-    return "fizzbuz";
-  } else if (numero % 3 == 0) {
-    return "fizz";
-  } else if (numero % 5 == 0) {
-    return "buzz;"
-  } else return numero;
+const multiplicarArreglo = arreglo => {
+  let multiplicacion = 1;
+  for (let n = 0; n < arreglo.length; n++){
+    multiplicacion = multiplicacion * arreglo[n];
+  }
+  return multiplicacion;
 }
 
-let numero = parseInt(prompt("Por favor ingrese el numero: "));
+const arreglo = [1,2,3,4,5];
 
-let respuesta = fizzbuzz(numero);
+let respuesta = multiplicarArreglo(arreglo);
 
-console.log("El numero es: " + respuesta);
+console.log("La multiplicacion de loe elementos del arreglo es: "+respuesta);

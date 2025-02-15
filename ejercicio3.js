@@ -1,25 +1,14 @@
-//escriba una funcion llmada likes que reciba un numero y retorne
-// un String utilizando el formato de k para miles y m para millones
+//04.IMPRIMIR UN ARREGLO
 
-//Por ejemplo 1400 se convierta en 1k 34567 se convierta en 34k
-// 7.000.352 se convierta en 7M si el numero es menol a mil se debe devolver el mismo numero
-// cmomo String
+//Escrinbir una funcion llamda imprimir arreglo que reciba un arreglo e imprima
+//elemento en una linea aparte
 
-const likes = (numero) => {
-  let tex = "";
-  if (numero >= 1000 && numero < 1000000) {
-    let divi = Math.round(numero / 1_000).toFixed(0);
-    tex = divi + "k";
-  } else if (numero >= 1000000) {
-    let divi = Math.round(numero / 1_000_000).toFixed(0);
-    tex = divi + "M";
-  } else if (numero < 1000) {
-    tex = numero.toString();
+const imprimirAreglo = (arreglo) => {
+  for (let n = 0; n <= arreglo.length; n++){
+    console.log(arreglo[n]);
   }
-  return tex;
 }
 
-let numero = parseInt(prompt("Por favor ingrese un numero: "));
+const arre = [10, 5, 5, 6, 2, 4, 5];
 
-let res = likes(numero);
-console.log(res);
+imprimirAreglo(arre);
